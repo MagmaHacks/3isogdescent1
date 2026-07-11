@@ -1,7 +1,7 @@
 # 3isogdescent1
 FindSubspace(S3, pred) is not used at all, vibe coded with ChatGPT on June 8, 2026.
 
-Substitute your current 3isogdescent.m file inside the [folder](/usr/local/magma/package/Geometry/CrvEll/ThreeDesc/)
+Substitute your current 3isogdescent.m file inside the folder /usr/local/magma/package/Geometry/CrvEll/ThreeDesc/
 If necessary, "touch" this file to have the date of the original 3isogdescent.m, e.g.:
 [code]touch -t 202310251430.00 3isogdescent.m[/code] for October 25, 2023, at 2:30 PM
 
