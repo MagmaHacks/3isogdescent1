@@ -1,16 +1,16 @@
 # 3isogdescent1
-FindSubspace(S3, pred) is not used at all, vibe coded with ChatGPT on June 8, 2026.
+```FindSubspace(S3, pred)``` is not used at all, vibe coded with ChatGPT on June 8, 2026.
 
-Substitute your current 3isogdescent.m file inside the folder */usr/local/magma/package/Geometry/CrvEll/ThreeDesc/*
+Substitute your current ```3isogdescent.m``` file inside the folder */usr/local/magma/package/Geometry/CrvEll/ThreeDesc/*
 
-If necessary, ```touch``` this file to have the date of the original 3isogdescent.m, e.g.:
-```touch -t 202305280000 3isogdescent.m``` for May 28, 2023
+If necessary, ```touch``` this file to have the date of the original ```3isogdescent.m```, e.g.:
+```touch -t 202305280000 3isogdescent.m``` for May 28, 2023.
 
 I sent this code to Magma for review by email on June 25, 2026. No response yet.
 
 **EDIT**: filed a bug report on July 11, 2026 via https://github.com/Magma-Maths/Magma (John Voight provided a link in his ANTS XVII slides https://www.antsxvii.org/slides/antsxvii-voight-slides.pdf).
 
-To be clear, it is not my code. It was ChatGPT's idea to stop using FindSubspace, and it is ChatGPT's implementation of that idea. The ~20,000 times speedup and close to no RAM use may be achieved by commenting a call to ```FindSubspace``` and using lines 80-98 instead (although the attached *.m file probably went through other minor changes, too).
+To be clear, it is not my code. It was ChatGPT's idea to stop using ```FindSubspace```, and it is ChatGPT's implementation of that idea. The ~20,000 times speedup and close to no RAM use may be achieved by commenting a call to ```FindSubspace``` and using lines 80-98 instead (although the attached *.m file probably went through other minor changes, too).
 
 The code makes ```ThreeIsogenySelmerGroups``` (and all intrinsics dependant on it) much faster (~20,000 times) for the elliptic curves **_with rational 3-torsion points_** (Z/3Z, Z/6Z, Z/9Z, Z/12Z, Z/2ZxZ/6Z), their isogenous curves (even those of trivial torsion) and their quadratic twists (even those of trivial torsion). It is also observably faster for Mordell curves of trivial torsion. In all cases, unlike the original ```ThreeIsogenySelmerGroups```, this modified code consumes close to no RAM.
 
